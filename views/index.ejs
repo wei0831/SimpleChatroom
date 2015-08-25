@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WEI0831 Chatroom 1.2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2>Change Log:</h2>
+        <ul>
+          <li>v1.2: Fixed: Sanitize input field.</li>
+          <li>v1.1: Fixed: Server restart will update existing connections' user list and clear out the history.</li>
+          <li>v1.0: Added: Added history upto 100 messages.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h1><u>WEI0831 Chat Board 1.2</u></h1>
+      </div>
+      <div class="row">
+        <form method="post" class="form-horizontal col-sm-12">
+          <div class="form-group">
+            <div class="form-control" id="chat">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <input type="text" id="input_chat" class="form-control" placeholder="Enter your message here :D" maxlength="200">
+            </div>
+            <div class="col-sm-2">
+              <input type="submit" value="Send" class="form-control btn btn-default">
+            </div>
+          </div>
+          <div class="form-group">
+          </button><lable class="control-label"><button type="button" id="btn_user">User</button></lable>
+            <ul class="form-control list-inline" id="user_list" style="height:auto"></ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
